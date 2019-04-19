@@ -1,6 +1,11 @@
 Caffe on Mobile Devices
 ==================
 
+* Add OpenCV 2.4.13.4 support, **Only for Android**.
+* Test on Ubuntu 16.04.
+
+----------------
+
 Optimized (for size and speed) Caffe lib for iOS and Android with demo APP. (CPU_ONLY, NO_BACKWARD, NO_BOOST, NO_HDF5, NO_LEVELDB)
 
 # Screenshots

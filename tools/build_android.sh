@@ -13,6 +13,8 @@ ANDROID_ABIs=("armeabi" "armeabi-v7a with NEON" "arm64-v8a")
 
 function build-abi {
     cd third_party
+    ./build-opencv-2.4.13.4.sh Android || exit 1
+    #exit 1
     ./build-protobuf-3.1.0.sh Android || exit 1
     #exit 1
     ./build-openblas.sh || exit 1
