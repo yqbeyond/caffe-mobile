@@ -152,7 +152,7 @@ function build-Android {
         exit 1
     fi
 
-    if [ ! -s ${TARGET}-opencv/lib/libopencv_core.a ]; then
+    if [ ! -s ${TARGET}-opencv/lib/libopencv_java.so ]; then
         mkdir -p opencv-$opencv_VERSION/$BUILD_DIR
         rm -rf opencv-$opencv_VERSION/$BUILD_DIR/*
         cd opencv-$opencv_VERSION/$BUILD_DIR
@@ -163,6 +163,7 @@ function build-Android {
             -DANDROID_NATIVE_API_LEVEL="$ANDROID_NATIVE_API_LEVEL" \
             -DBUILD_TESTS=OFF \
             -DBUILD_SHARED_LIBS=OFF \
+			-DBUILD_FAT_JAVA_LIB=ON \
             -DBUILD_WITH_ZLIB=OFF \
             -DWITH_CUDA=OFF \
             -G "Unix Makefiles"

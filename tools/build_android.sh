@@ -31,6 +31,7 @@ function build-abi {
     cd ../examples/android/CaffeSimple/app/
     mkdir -p libs/${ANDROID_ABI%% *}
     ln -sf ../../../../../../build_${ANDROID_ABI%% *}/lib/libcaffe-jni.so libs/${ANDROID_ABI%% *}/libcaffe-jni.so
+	ln -sf ../../../../../../third_party/${ANDROID_ABI%% *}_opencv/sdk/native/libs/${ANDROID_ABI%% *}/libopencv_java.so  libs/${ANDROID_ABI%% *}/libopencv_java.so 
     cd ../../../..
 }
 
